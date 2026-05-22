@@ -1,3 +1,49 @@
+substitutions:
+  name: "midea"
+  friendly_name: "Midea"
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  name_add_mac_suffix: true
+
+  project:
+    name: esphome.midea
+    version: "1.0"
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  - platform: esphome
+
+dashboard_import:
+  package_import_url: github://danielionutmuresan/esp-configs/midea.yaml@main
+  import_full_config: true
+
+
+wifi:
+  networks:
+  - ssid: default
+    password: "12345678"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    password: "fallback1234"
+
+captive_portal:
+
+esp32_improv:
+  authorizer: none
+
 status_led:
   pin: 14
 uart:
