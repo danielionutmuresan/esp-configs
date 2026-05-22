@@ -25,9 +25,9 @@ api:
 ota:
   - platform: esphome
 
-#dashboard_import:
-#  package_import_url: github://danielionutmuresan/esp-configs/midea.yaml@main
-#  import_full_config: true
+dashboard_import:
+  package_import_url: github://danielionutmuresan/esp-configs/midea.yaml@main
+  import_full_config: true
 
 
 wifi:
