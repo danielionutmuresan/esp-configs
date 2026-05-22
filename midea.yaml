@@ -46,8 +46,8 @@ esp32_improv:
 status_led:
   pin: 14
 uart:
-  rx_pin: 48
-  tx_pin: 34
+  rx_pin: 34
+  tx_pin: 48
   baud_rate: 9600
 
 climate:
