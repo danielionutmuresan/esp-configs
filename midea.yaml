@@ -1,35 +1,3 @@
-esphome:
-  name: midea
-  friendly_name: midea
-  name_add_mac_suffix: true
-
-esp32:
-  board: esp32-s3-devkitc-1
-  framework:
-    type: arduino
-
-# Enable logging
-logger:
-
-# Enable Home Assistant API
-api:
-
-ota:
-  - platform: esphome
-    password: "c7d8c12b600c629301497756211602a0"
-
-wifi:
-  networks:
-  - ssid: default
-    password: 12345678
-
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: "Midea Fallback Hotspot"
-    password: "fallback1234"
-
-captive_portal:
-
 status_led:
   pin: 14
 uart:
@@ -75,5 +43,3 @@ climate:
       name: Power
     humidity_setpoint:          # Optional. Indoor humidity sensor (only for devices that support this feature).
       name: Humidity
-
-          
