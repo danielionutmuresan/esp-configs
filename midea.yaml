@@ -31,7 +31,7 @@ dashboard_import:
 
 
 wifi:
-  ssid: !secret wifi_ssid
+  ssid: !secret wifi_ssid2
   password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
@@ -61,8 +61,8 @@ climate:
     beeper: false                # Beep on commands.
     visual:                     # Optional. Example of visual settings override.
       min_temperature: 17  # min: 17
-      max_temperature: 30 °C    # max: 30
-      temperature_step: 0.5 °C  # min: 0.5
+      max_temperature: 30    # max: 30
+      temperature_step: 0.5  # min: 0.5
     supported_modes:            # Optional. All capabilities in this section may be detected by autoconf.
       - FAN_ONLY
       - HEAT_COOL
